@@ -2,9 +2,9 @@ from scraper.fetcher import WebFetcher
 from scraper.parser import HTMLParser
 from scraper.extractor import DataExtractor
 from scraper.exporter import JSONExporter
+import os
 
-
-url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
+url = os.getenv("URL")
 
 fetcher = WebFetcher()
 parser = HTMLParser()
